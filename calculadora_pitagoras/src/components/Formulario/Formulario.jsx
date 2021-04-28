@@ -15,9 +15,6 @@ class Formulario extends Component {
           placeholder="Segundo cateto"
           className="formulario_input"
         />
-        <label htmlFor="hipotenusa">Hipotenusa:</label>
-        <input type="text" className="formulario_input" id="hipotenusa"/>
-
         <button>Calcular</button>
       </form>
     );
