@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Formulario from "./components/Formulario";
 import CardResposta from "./components/CardResposta";
+import "./assets/index.css"
 
 class App extends Component {
 
