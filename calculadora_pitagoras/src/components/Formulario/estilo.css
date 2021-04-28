@@ -17,4 +17,12 @@
 .formulario_btn {
   margin-top: 8px;
   width: 80px;
+  
+}
+
+.formulario_erro{
+  color:red;
+  font-size: smaller;
+  height: 20px;
+  ;
 }
