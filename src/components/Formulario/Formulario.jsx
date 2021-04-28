@@ -43,6 +43,7 @@ class Formulario extends Component {
   render() {
     return (
       //Criação de formulario
+
       <form
         className="formulario"
         onSubmit={this.calcular.bind(
