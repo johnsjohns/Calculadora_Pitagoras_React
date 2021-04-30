@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Formulario from "./components/Formulario";
 import CardResposta from "./components/CardResposta";
+import Figura from "./components/Figura"
 import "./assets/index.css";
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
   render() {
     return (
       <section className="app_section">
+        <Figura/>
         <Formulario
           calcular={
             this.calcular.bind(

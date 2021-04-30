@@ -4,9 +4,9 @@ body {
 
 .app_section {
   margin: auto;
-  background-color: #00ffff;
+  background-color: #f5f5dc;
   width: 40%;
   border-radius: 5px;
-  border: #0000ff solid;
-  box-shadow: 0 0 8px #09f7f2, 0 0 24px #1b0df6;
+  border: #6d6d6d solid;
+  box-shadow: 0 0 5px 1px #1b0df6;
 }

@@ -19,6 +19,8 @@
   border-radius: 5px;
   width: 100px;
   margin: 5px;
+  margin-left: 55px;
+  padding: 5px;
 }
 
 .formulario_btn:hover {
