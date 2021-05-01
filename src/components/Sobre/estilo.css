@@ -1,0 +1,42 @@
+.sobre_section {
+  margin-top: 30px;
+  width: 80%;
+}
+.sobre_titulo {
+  margin: auto;
+  text-align: center;
+}
+.sobre_painel {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.sobre_img {
+  max-width: 500px;
+  min-width: 100px;
+  max-height: 500px;
+  min-height: 100px;
+}
+
+.sobre_painel_teorema {
+  display: flex;
+  flex-direction: column;
+}
+.sobre_texto {
+  height: 250px;
+  width: 400px;
+  margin: 0;
+  font-weight: bold;
+  border-style: none;
+  outline-style: none;
+  background-color: transparent;
+  text-align: justify;
+  white-space: normal;
+}
+
+.sobre_img_teorema {
+  margin: auto;
+  max-width: 200px;
+  
+}

@@ -8,7 +8,8 @@ class Formulario extends Component {
     this.state = {
       cateto1: "",
       cateto2: "",
-      error: "",
+      error_cateto1: "",
+      error_cateto2: "",
     };
   }
 
@@ -16,9 +17,14 @@ class Formulario extends Component {
     evento.preventDefault(); // Impede a pagina de recarregar quando o evento for chamado
     evento.stopPropagation(); //Impede a propagação do evento
     if (this.state.cateto1 === "" || this.state.cateto2 === "") {
-      this.setState({
-        error: "Campo não pode estar em branco",
-      });
+      if (this.state.cateto1 === "")
+        this.setState({
+          error_cateto1: "Campo não pode estar em branco",
+        });
+      if (this.state.cateto2 === "")
+        this.setState({
+          error_cateto2: "Campo não pode estar em branco",
+        });
     } else {
       this.props.calcular(this.state.cateto1, this.state.cateto2);
     }
@@ -28,14 +34,17 @@ class Formulario extends Component {
     evento.stopPropagation(); //Impede a propagação do evento
     const name = evento.target.name; // Atribui a variaval name o nome referente ao input do evento
     const value = evento.target.value; // atribui a varial value o valuea do input do evento
+    const error = "error_" + name; // adiciona o nome do elemento para formar o nome do elemento de erro
+
     if (isNaN(value)) {
       this.setState({
-        error: "somente numeros",
+        [error]: "Digite somente números",
       }); //se o caracter digitado não for um numero, mostra msg de erro
     } else {
       this.setState({
         [name]: value,
-        error: "",
+        error_cateto1: "",
+        error_cateto2: "",
       }); //adicona o valor do campo lido na variavel cateto1
     }
   }
@@ -50,8 +59,10 @@ class Formulario extends Component {
           this
         )} /*Quando o botão calculor for apertado, chama a função _calcular */
       >
-        <section>
-          <label htmlFor="cateto1">Cateto:</label>
+        <div>
+          <label htmlFor="cateto1" className="formulario_label">
+            Cateto A:
+          </label>
           <input
             type="text"
             placeholder="Primeiro cateto"
@@ -62,10 +73,12 @@ class Formulario extends Component {
               this
             )} /* Quanto o valor do campo for alterado, grava o valor na variavel cateto1*/
           />
-        </section>
-        <p className="formulario_erro">{this.state.error}</p>
-        <section>
-          <label htmlFor="cateto2">Cateto:</label>
+        </div>
+        <p className="formulario_erro">{this.state.error_cateto1}</p>
+        <div>
+          <label htmlFor="cateto2" className="formulario_label">
+            Cateto B:
+          </label>
           <input
             type="text"
             placeholder="Segundo cateto"
@@ -76,9 +89,11 @@ class Formulario extends Component {
               this
             )} /* Quanto o valor do campo for alterado, grava o valor na variavel cateto2*/
           />
-        </section>
-        <p className="formulario_erro">{this.state.error}</p>
-        <button className="formulario_btn">Calcular</button>
+        </div>
+        <p className="formulario_erro">{this.state.error_cateto2}</p>
+        <div className="formulario_div_btn">
+          <button className="formulario_btn">Calcular</button>
+        </div>
       </form>
     );
   }
