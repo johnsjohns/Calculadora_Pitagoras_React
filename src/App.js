@@ -21,6 +21,7 @@ class App extends Component {
   render() {
     return (
       <section className="app_section">
+        <Figura/>
         <Formulario
           calcular={
             this.calcular.bind(
