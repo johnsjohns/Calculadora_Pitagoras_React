@@ -1,12 +1,5 @@
 body {
-  background-color: #ffffff;
+    background-color: #ffe4c4;
 }
 
-.app_section {
-  margin: auto;
-  background-color: #00ffff;
-  width: 40%;
-  border-radius: 5px;
-  border: #0000ff solid;
-  box-shadow: 0 0 8px #09f7f2, 0 0 24px #1b0df6;
-}
+

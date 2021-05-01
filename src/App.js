@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Formulario from "./components/Formulario";
 import CardResposta from "./components/CardResposta";
+import Sobre from "./components/Sobre";
 import "./assets/index.css";
 
 class App extends Component {
@@ -33,6 +34,8 @@ class App extends Component {
               .hipotenusa /**passa a variavel hipotenusa como parametro para a classe CardResposta */
           }
         />
+
+        <Sobre />
       </section>
     );
   }

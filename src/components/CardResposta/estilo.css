@@ -1,5 +1,26 @@
 .card_resposta_section {
-  text-align: center;
-  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  width: 40%;
   margin-bottom: 10px;
+    
+}
+
+.card_resposta_section {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.card_resposta {
+  margin-right: 5px;
+  text-align: right;
+  width: 68%;
+  
+}
+
+.card_resposta_hipotenusa{
+    margin-right:35px;
+    
+    
 }
